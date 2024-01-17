@@ -2,7 +2,6 @@
  * The MIT License (MIT)
  *
  * Copyright (c) 2018 Ha Thach for Adafruit Industries
- * Copyright (c) 2021 Chris Marc Dailey
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,15 +22,15 @@
  * THE SOFTWARE.
  */
 
-#ifndef _FASCIA_NRF52840_H_
-#define _FASCIA_NRF52840_H_
+#ifndef _FEATHER_NRF52840_SENSE_H
+#define _FEATHER_NRF52840_SENSE_H
 
 #define _PINNUM(port, pin)    ((port)*32 + (pin))
 
 /*------------------------------------------------------------------*/
 /* LED
  *------------------------------------------------------------------*/
-#define LEDS_NUMBER           1  // red LED
+#define LEDS_NUMBER           1
 #define LED_PRIMARY_PIN       _PINNUM(0, 30)
 #define LED_STATE_ON          1
 
@@ -39,28 +38,28 @@
 /* BUTTON
  *------------------------------------------------------------------*/
 #define BUTTONS_NUMBER        2
-#define BUTTON_1              _PINNUM(1, 11)
-#define BUTTON_2              _PINNUM(1, 0)
+#define BUTTON_1              _PINNUM(0, 29)
+#define BUTTON_2              _PINNUM(0, 03)
 #define BUTTON_PULL           NRF_GPIO_PIN_PULLUP
 
 //--------------------------------------------------------------------+
 // BLE OTA
 //--------------------------------------------------------------------+
 #define BLEDIS_MANUFACTURER   "Fascia"
-#define BLEDIS_MODEL          "Fascia nRF52840"
+#define BLEDIS_MODEL          "FASCIA FEATHER EXPRESS"
 
 //--------------------------------------------------------------------+
 // USB
 //--------------------------------------------------------------------+
+
 #define USB_DESC_VID           0x63C2
 #define USB_DESC_UF2_PID       0x0022
 #define USB_DESC_CDC_ONLY_PID  0xb020
 
-//------------- UF2 -------------//
-#define UF2_PRODUCT_NAME       "Fascia nRF52840"
-#define UF2_VOLUME_LABEL       "FASCIABOOT"
-#define UF2_BOARD_ID           "nRF52840-fascia-v2"
 
-#define UF2_INDEX_URL          "https://www.fascia.ai"
+#define UF2_PRODUCT_NAME   "Fasciav2_xprs"
+#define UF2_VOLUME_LABEL   "FASCIA2XPRS"
+#define UF2_BOARD_ID       "Fascia_nRF52840_express"
+#define UF2_INDEX_URL      "https://www.fascia.ai"
 
-#endif /* _FASCIA_NRF52840_H_ */
+#endif // _FEATHER_NRF52840_SENSE_H
